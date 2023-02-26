@@ -9,9 +9,8 @@ const Cards = ({item, handleClick}) => {
             <img src={img} alt="" />
         </div>
         <div className="details">
-            <p>{title}</p>
-            <p>{author}</p>
-            <p>Price - {price}Rs</p>
+            <p className='title'>{title}</p>
+            <p className='price'> ₹ {price}</p>
             <button onClick={()=>handleClick(item)} >Add to Cart</button>
         </div>
     </div>

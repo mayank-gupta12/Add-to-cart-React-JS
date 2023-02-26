@@ -32,13 +32,13 @@ const Cart = ({cart, setCart, handleChange}) => {
                         <img src={item.img} alt=""/>
                         <p>{item.title}</p>
                     </div>
-                    <div>
-                        <button onClick={()=>handleChange(item, -1)}> - </button>
+                    <div className='btn'>
+                        <button className='dec' onClick={()=>handleChange(item, -1)}> - </button>
                         <button>{item.amount}</button>
-                        <button onClick={()=>handleChange(item, +1)}> + </button>
+                        <button className='inc' onClick={()=>handleChange(item, +1)}> + </button>
                     </div>
-                    <div>
-                        <span>{item.price}</span>
+                    <div className='rate'>
+                        <span>₹ {item.price}</span>
                         <button onClick={()=>handleRemove(item.id)} >Remove</button>
                     </div>
                 </div>
